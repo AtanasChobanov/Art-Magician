@@ -1,0 +1,125 @@
+@keyframes infinityMove {
+    0% {
+        transform: translate(-50px, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(0, 30px) rotate(45deg);
+    }
+    50% {
+        transform: translate(50px, 0) rotate(0deg);
+    }
+    75% {
+        transform: translate(0, -30px) rotate(-45deg);
+    }
+    100% {
+        transform: translate(-50px, 0) rotate(0deg);
+    }
+}
+
+.infinity-move {
+    animation: infinityMove 2.5s ease-in-out infinite;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-color: #A1D6B2;
+    color: #362706;
+    max-height: 100vh;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #362706;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.btn {
+    border-radius: 10px;
+    padding: 8px 20px;
+    margin: 15px;
+    font-size: 18px;
+    color: #362706;
+    border: 1px solid;
+    
+}
+
+.select-bar {
+    height: 30px;
+    border: 2px inset;
+    border-radius: 4px;
+}
+
+#style-label {
+    font-weight: 500;
+}
+
+#message {
+    margin: 50px 4.5rem;
+    display: block;
+}
+
+img {
+    margin: 10px;
+    border-radius: 5px;
+    max-width: 39vw;
+    max-height: 60vh;
+}
+
+form {
+    text-align: center;
+}
+
+svg {
+    transition: transform 0.2s ease-in-out;
+    margin: 30px 50px;
+}
+
+@media (max-width: 650px) {
+    body {
+        font-size: 1.3rem;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+    
+    .btn {
+        margin-top: 0;
+    }
+
+    img {
+        max-width: 72vw;
+    }
+}
